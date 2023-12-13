@@ -1,4 +1,5 @@
 import React from 'react'
+import './QuizView.css'
 
 const QuizView = () => {
     return (

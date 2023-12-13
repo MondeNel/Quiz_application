@@ -14,7 +14,9 @@ body {
   background-color: rgb(120, 120, 241);
   color: white;
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
   width: 575px;
   height: min-content;
   padding: 10px;
