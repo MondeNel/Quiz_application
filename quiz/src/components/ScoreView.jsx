@@ -4,8 +4,9 @@ import './ScoreView.css';
 const ScoreView = ({ score, resetQuiz }) => {
     return (
         <div>
-            <p>You scored {score} out of 13</p>
-            <button onClick={resetQuiz}>Reset</button>
+            <h2>Quiz Completed!</h2>
+            <p>Your Score: {score}</p>
+            <button onClick={resetQuiz}>Restart Quiz</button>
         </div>
     );
 };

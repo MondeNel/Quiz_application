@@ -123,6 +123,16 @@ function App() {
         { text: 'Saturn' },
       ],
     },
+    {
+      question: 'In which year did World War I begin?',
+      answers: [
+        { text: '1912' },
+        { text: '1914', isCorrect: true },
+        { text: '1918' },
+        { text: '1920' },
+      ],
+    },
+
 
   ]);
 
@@ -154,12 +164,11 @@ function App() {
           currentQuestionIndex={currentQuestionIndex}
           questions={questions}
         />
-
       ) : (
         <ScoreView score={score} resetQuiz={handleResetQuiz} />
       )}
     </div>
   );
-}
+};
 
 export default App;
