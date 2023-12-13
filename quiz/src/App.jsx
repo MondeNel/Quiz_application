@@ -1,13 +1,16 @@
 import React from 'react'
 import './App.css'
+import ScoreView from './components/ScoreView'
+import QuizView from './components/QuizView'
 
 function App() {
 
 
   return (
-    <>
-      hello
-    </>
+    <div className="App">
+      {/* <ScoreView /> */}
+      <QuizView />
+    </div>
   )
 }
 

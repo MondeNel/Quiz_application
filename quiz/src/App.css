@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App {
+  background-color: rgb(120, 120, 241);
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  width: 575px;
+  height: min-content;
+  padding: 10px;
+  box-shadow: 10px 10px 42px 8px lightblue;
+  border-radius: 5px;
+}
+
+button {
+  cursor: pointer;
+  background-color: white;
+  color: rgb(120, 120, 241);
+  border: none;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 600;
+  width: 100%;
+}
