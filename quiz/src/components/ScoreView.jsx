@@ -1,13 +1,13 @@
-import React from 'react'
-import './ScoreView.css'
+import React from 'react';
+import './ScoreView.css';
 
-const ScoreView = () => {
+const ScoreView = ({ score, resetQuiz }) => {
     return (
         <div>
-            <p>You scored 1 out of 5</p>
-            <button>reset</button>
+            <p>You scored {score} out of 13</p>
+            <button onClick={resetQuiz}>Reset</button>
         </div>
-    )
-}
+    );
+};
 
-export default ScoreView
+export default ScoreView;

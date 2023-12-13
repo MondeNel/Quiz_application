@@ -1,24 +1,31 @@
-import React from 'react'
-import './QuizView.css'
+import React from 'react';
+import './QuizView.css';
 
-const QuizView = () => {
+const QuizView = ({ question, updateScore, onNextQuestion, currentQuestionIndex, questions }) => {
+    const handleAnswerClick = (isCorrect) => {
+        updateScore(isCorrect);
+        onNextQuestion();
+    };
+
     return (
         <>
             <div className="question">
                 <div className="question_number">
-                    <span>Question 1 / 5</span>
+                    {/* Use the passed props instead of referencing undefined variables */}
+                    <span>{`Question ${currentQuestionIndex + 1} / ${questions.length}`}</span>
                 </div>
-                <div className="question_text">What comes after b?</div>
+                <div className="question_text">{question.question}</div>
             </div>
-
 
             <div className="answer">
-                <button>a</button>
-                <button>c</button>
-                <button>f</button>
+                {question.answers.map((answer, index) => (
+                    <button key={index} onClick={() => handleAnswerClick(answer.isCorrect)}>
+                        {answer.text}
+                    </button>
+                ))}
             </div>
         </>
-    )
-}
+    );
+};
 
-export default QuizView
+export default QuizView;
